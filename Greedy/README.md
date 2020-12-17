@@ -1,0 +1,1 @@
+These are the problems to be solved using Greedy algorithm.

@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8fadb12-2743-435b-a11e-db8ee8106df8" name="Default Changelist" comment="" />
+    <list default="true" id="e8fadb12-2743-435b-a11e-db8ee8106df8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Greedy/135. Candy.md" beforeDir="false" afterPath="$PROJECT_DIR$/Greedy/135. Candy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Greedy/455. Assign Cookies.md" beforeDir="false" afterPath="$PROJECT_DIR$/Greedy/455. Assign Cookies.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/1218. Longest Arithmetic Subsequence of Given Difference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/1314. Matrix Block Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/139. Word Break.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/144. Binary Tree Preorder Traversal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/1477. Find Two Non-overlapping Sub-arrays Each With Target Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/22. Generate Parentheses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/221. Maximal Square.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/300. Longest Increasing Subsequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/304. Range Sum Query 2D - Immutable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/322. Coin Change.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/338. Counting Bits.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/368. Largest Divisible Subset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/392. Is Subsequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/416. Partition Equal Subset Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/43. Multiply Strings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/46. Permutations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/467. Unique Substrings in Wraparound String.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/474. Ones and Zeroes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5. Longest Palindromic Substring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/51. N-Queens.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/546. Remove Boxes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5468. Kth Missing Positive Number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5469. Can Convert String in K Moves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5470. Minimum Insertions to Balance a Parentheses String.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5471. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5478. Get the Maximum Score.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/5483. Make The String Great.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/62. Unique Paths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/63. Unique Paths II.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/64. Minimum Path Sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/662. Maximum Width of Binary Tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/673. Number of Longest Increasing Subsequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/688. Knight Probability in Chessboard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/70. Climbing Stairs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/746. Min Cost Climbing Stairs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/764. Largest Plus Sign.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/77. Combinations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/78. Subsets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/792. Number of Matching Subsequences.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/808. Soup Servings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/90. Subsets II.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/91. Decode Ways.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/983. Minimum Cost For Tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Alert Using Same Key.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/BinaryTree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Black White Square.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Concatenation of Consecutive Binary Numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Coordinate With Maximum Network Quality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Count Substrings That Differ by One Character.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Detect Cycles in 2D Grid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Detect Pattern of Length M Repeated K or More Times.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Find Latest Group of Size M.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Find the Most Competitive Subsequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Goal Parser Interpretation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Kth Smallest Instructions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Make Sum Divisible by P.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Max Number of K-Sum Pairs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Maximal Network Rank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Maximum Length of Subarray With Positive Product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Maximum Profit of Operating a Centennial Wheel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Minimum Deletion Cost to Avoid Repeating Letters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Minimum Number of Days to Eat N Oranges.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Minimum One Bit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Number of Ways to Split a String.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Path With Minimum Effort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Rearrange Spaces Between Words.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Sort Array by Increasing Frequency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Split Two Strings to Make Palindrome.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Split a String.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Throne Inheritance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/Unhappy Friends.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/breakfast.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unclassified Code/linkedlist.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +92,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fRluNF5ieZjEHgy8TOynvacGwk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +104,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -32,7 +115,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Concatenation of Consecutive Binary Numbers">
+  <component name="RunManager" selected="Python.Stone Game VII">
     <configuration name="Concatenation of Consecutive Binary Numbers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,28 +182,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Kth Smallest Instructions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Kth Smallest Instructions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Max Number of K-Sum Pairs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,13 +204,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Stone Game VII" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unclassified Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unclassified Code/Stone Game VII.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Stone Game VII" />
         <item itemvalue="Python.Concatenation of Consecutive Binary Numbers" />
         <item itemvalue="Python.Max Number of K-Sum Pairs" />
         <item itemvalue="Python.Goal Parser Interpretation" />
         <item itemvalue="Python.Find the Most Competitive Subsequence" />
-        <item itemvalue="Python.Kth Smallest Instructions" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +277,7 @@
       <workItem from="1604156103974" duration="3171000" />
       <workItem from="1606618379370" duration="1452000" />
       <workItem from="1607222330120" duration="2835000" />
+      <workItem from="1607828042686" duration="2174000" />
     </task>
     <servers />
   </component>
@@ -201,466 +285,55 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1420" height="108" key="GridCell.Tab.0.bottom" timestamp="1607263182788">
+    <state width="1420" height="108" key="GridCell.Tab.0.bottom" timestamp="1608085217981">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="108" key="GridCell.Tab.0.bottom/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182788" />
+    <state width="1420" height="108" key="GridCell.Tab.0.bottom/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217981" />
     <state width="1420" height="108" key="GridCell.Tab.0.bottom/0.0.1463.783@0.0.1463.783" timestamp="1604202954459" />
-    <state width="1420" height="108" key="GridCell.Tab.0.center" timestamp="1607263182787">
+    <state width="1420" height="108" key="GridCell.Tab.0.center" timestamp="1608085217981">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="108" key="GridCell.Tab.0.center/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182787" />
+    <state width="1420" height="108" key="GridCell.Tab.0.center/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217981" />
     <state width="1420" height="108" key="GridCell.Tab.0.center/0.0.1463.783@0.0.1463.783" timestamp="1604202954458" />
-    <state width="1420" height="108" key="GridCell.Tab.0.left" timestamp="1607263182787">
+    <state width="1420" height="108" key="GridCell.Tab.0.left" timestamp="1608085217981">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="108" key="GridCell.Tab.0.left/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182787" />
+    <state width="1420" height="108" key="GridCell.Tab.0.left/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217981" />
     <state width="1420" height="108" key="GridCell.Tab.0.left/0.0.1463.783@0.0.1463.783" timestamp="1604202954458" />
-    <state width="1420" height="108" key="GridCell.Tab.0.right" timestamp="1607263182787">
+    <state width="1420" height="108" key="GridCell.Tab.0.right" timestamp="1608085217981">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="108" key="GridCell.Tab.0.right/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182787" />
+    <state width="1420" height="108" key="GridCell.Tab.0.right/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217981" />
     <state width="1420" height="108" key="GridCell.Tab.0.right/0.0.1463.783@0.0.1463.783" timestamp="1604202954458" />
-    <state width="1420" height="233" key="GridCell.Tab.1.bottom" timestamp="1607263182748">
+    <state width="1420" height="233" key="GridCell.Tab.1.bottom" timestamp="1608085217940">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="233" key="GridCell.Tab.1.bottom/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182748" />
+    <state width="1420" height="233" key="GridCell.Tab.1.bottom/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217940" />
     <state width="1420" height="233" key="GridCell.Tab.1.bottom/0.0.1463.783@0.0.1463.783" timestamp="1604202834993" />
-    <state width="1420" height="233" key="GridCell.Tab.1.center" timestamp="1607263182748">
+    <state width="1420" height="233" key="GridCell.Tab.1.center" timestamp="1608085217940">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="233" key="GridCell.Tab.1.center/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182748" />
+    <state width="1420" height="233" key="GridCell.Tab.1.center/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217940" />
     <state width="1420" height="233" key="GridCell.Tab.1.center/0.0.1463.783@0.0.1463.783" timestamp="1604202834993" />
-    <state width="1420" height="233" key="GridCell.Tab.1.left" timestamp="1607263182748">
+    <state width="1420" height="233" key="GridCell.Tab.1.left" timestamp="1608085217940">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="233" key="GridCell.Tab.1.left/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182747" />
+    <state width="1420" height="233" key="GridCell.Tab.1.left/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217940" />
     <state width="1420" height="233" key="GridCell.Tab.1.left/0.0.1463.783@0.0.1463.783" timestamp="1604202834993" />
-    <state width="1420" height="233" key="GridCell.Tab.1.right" timestamp="1607263182748">
+    <state width="1420" height="233" key="GridCell.Tab.1.right" timestamp="1608085217940">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state width="1420" height="233" key="GridCell.Tab.1.right/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607263182748" />
+    <state width="1420" height="233" key="GridCell.Tab.1.right/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1608085217940" />
     <state width="1420" height="233" key="GridCell.Tab.1.right/0.0.1463.783@0.0.1463.783" timestamp="1604202834993" />
     <state width="738" height="398" key="XDebugger.FullValuePopup" timestamp="1599320526433">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
     <state width="738" height="398" key="XDebugger.FullValuePopup/0.0.1463.783@0.0.1463.783" timestamp="1599320526433" />
-    <state x="414" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1607222332319">
+    <state x="414" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1607828042924">
       <screen x="0" y="0" width="1463" height="783" />
     </state>
-    <state x="414" y="216" key="com.intellij.ide.util.TipDialog/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607222332319" />
+    <state x="414" y="216" key="com.intellij.ide.util.TipDialog/0.0.1463.783/350.-1080.1920.1040@0.0.1463.783" timestamp="1607828042924" />
     <state x="414" y="216" key="com.intellij.ide.util.TipDialog/0.0.1463.783@0.0.1463.783" timestamp="1604156105490" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5478. Get the Maximum Score.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5478. Get the Maximum Score.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/64. Minimum Path Sum.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/91. Decode Ways.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/304. Range Sum Query 2D - Immutable.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/304. Range Sum Query 2D - Immutable.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/392. Is Subsequence.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/392. Is Subsequence.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/792. Number of Matching Subsequences.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/792. Number of Matching Subsequences.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/139. Word Break.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/221. Maximal Square.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/300. Longest Increasing Subsequence.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/673. Number of Longest Increasing Subsequence.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/322. Coin Change.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/983. Minimum Cost For Tickets.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/338. Counting Bits.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/1218. Longest Arithmetic Subsequence of Given Difference.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/1218. Longest Arithmetic Subsequence of Given Difference.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/368. Largest Divisible Subset.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5468. Kth Missing Positive Number.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5469. Can Convert String in K Moves.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5470. Minimum Insertions to Balance a Parentheses String.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5483. Make The String Great.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5471. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/5471. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/1477. Find Two Non-overlapping Sub-arrays Each With Target Sum.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/416. Partition Equal Subset Sum.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/467. Unique Substrings in Wraparound String.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/474. Ones and Zeroes.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/688. Knight Probability in Chessboard.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/43. Multiply Strings.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/808. Soup Servings.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/808. Soup Servings.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/78. Subsets.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/78. Subsets.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/90. Subsets II.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/90. Subsets II.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/77. Combinations.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/46. Permutations.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/546. Remove Boxes.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/22. Generate Parentheses.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Minimum Number of Days to Eat N Oranges.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Minimum Number of Days to Eat N Oranges.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Detect Cycles in 2D Grid.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Find Latest Group of Size M.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Detect Pattern of Length M Repeated K or More Times.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Maximum Length of Subarray With Positive Product.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/51. N-Queens.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/51. N-Queens.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Number of Ways to Split a String.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Number of Ways to Split a String.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Number of Ways to Split a String.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Minimum Deletion Cost to Avoid Repeating Letters.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/662. Maximum Width of Binary Tree.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/breakfast.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Unhappy Friends.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Black White Square.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Make Sum Divisible by P.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rearrange Spaces Between Words.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rearrange Spaces Between Words.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rearrange Spaces Between Words.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rearrange Spaces Between Words.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Split a String.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="115" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Maximum Profit of Operating a Centennial Wheel.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Throne Inheritance.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Alert Using Same Key.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Minimum One Bit.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="120" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Maximal Network Rank.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Maximal Network Rank.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Split Two Strings to Make Palindrome.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Coordinate With Maximum Network Quality.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Coordinate With Maximum Network Quality.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Path With Minimum Effort.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sort Array by Increasing Frequency.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sort Array by Increasing Frequency.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Count Substrings That Differ by One Character.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Kth Smallest Instructions.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Find the Most Competitive Subsequence.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Goal Parser Interpretation.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Max Number of K-Sum Pairs.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/leetcode$Concatenation_of_Consecutive_Binary_Numbers.coverage" NAME="Concatenation of Consecutive Binary Numbers Coverage Results" MODIFIED="1607224636955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -694,6 +367,7 @@
     <SUITE FILE_PATH="coverage/leetcode$78__Subsets.coverage" NAME="78. Subsets Coverage Results" MODIFIED="1597392715209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/leetcode$Maximum_Profit_of_Operating_a_Centennial_Wheel.coverage" NAME="Maximum Profit of Operating a Centennial Wheel Coverage Results" MODIFIED="1601175845513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/leetcode$662__Maximum_Width_of_Binary_Tree.coverage" NAME="662. Maximum Width of Binary Tree Coverage Results" MODIFIED="1599895384110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/leetcode$Stone_Game_VII.coverage" NAME="Stone Game VII Coverage Results" MODIFIED="1607829525383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Unclassified Code" />
     <SUITE FILE_PATH="coverage/leetcode$Minimum_Number_of_Days_to_Eat_N_Oranges.coverage" NAME="Minimum Number of Days to Eat N Oranges Coverage Results" MODIFIED="1597550167852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/leetcode$Black_White_Square.coverage" NAME="Black White Square Coverage Results" MODIFIED="1600528463969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/leetcode$Throne_Inheritance.coverage" NAME="Throne Inheritance Coverage Results" MODIFIED="1601737230285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
