@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Chapter1 Greedy · GitBook</title>
+        <title>665. Non-decreasing Array [Easy] · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="455. Assign Cookies.html" />
     
-    
-    <link rel="prev" href="../" />
+    <link rel="prev" href="135. Candy.html" />
     
 
     </head>
@@ -102,7 +100,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -233,7 +231,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="665. Non-decreasing Array.html">
+        <li class="chapter active" data-level="1.2.10" data-path="665. Non-decreasing Array.html">
             
                 <a href="665. Non-decreasing Array.html">
             
@@ -281,7 +279,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Chapter1 Greedy</a>
+        <a href=".." >665. Non-decreasing Array [Easy]</a>
     </h1>
 </div>
 
@@ -296,7 +294,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>These are the problems to be solved using Greedy algorithm.</p>
+                                <h1 id="665-non-decreasing-array-easy"><a href="https://leetcode.com/problems/non-decreasing-array/" target="_blank">665. Non-decreasing Array</a> [Easy]</h1>
+<p>Given an array nums with n integers, your task is to check if it could become non-decreasing by modifying <strong>at most</strong> <code>1</code> element.</p>
+<p>We define an array is non-decreasing if <code>nums[i] &lt;= nums[i + 1]</code> holds for every <code>i</code> (0-based) such that <code>(0 &lt;= i &lt;= n - 2)</code>.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: nums = [4,2,3]
+Output: true
+Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: nums = [4,2,1]
+Output: false
+Explanation: You can&apos;t get a non-decreasing array by modifying at most one element.
+</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li><code>1 &lt;= n &lt;= 10 ^ 4</code></li>
+<li><code>- 10 ^ 5 &lt;= nums[i] &lt;= 10 ^ 5</code></li>
+</ol>
+<hr>
+<h2 id="anaylsis"><strong>Anaylsis:</strong></h2>
+<p>The solution to this problem is quite intuitive. Since we are seeking a non-decreasing array, the only situation we get into trouble is when we see <code>nums[i] &gt; nums[i + 1]</code>. To solve this problem, we can either set <code>nums[i] = nums[i-1]</code> or <code>nums[i] = nums[i+1]</code> or eliminate <code>nums[i]</code>. These operations are equivalent since we are just making a &quot;True or False&quot; statement, with the key point being only one operation is allowed.</p>
+<p>Let&apos;s say we delete either <code>nums[i]</code> or <code>nums[i+1]</code> when we see <code>nums[i] &gt; nums[i + 1]</code>. The problem is when we delete <code>nums[i]</code>, <code>nums[i-1]</code> may still be larger than <code>nums[i+1]</code>, which requires another elimination. The same goes for deleting <code>nums[i+1]</code>.</p>
+<p>Thus, the strategy is when we see <code>nums[i] &gt; nums[i + 1]</code>, if <code>nums[i-1] &gt; nums[i+1]</code> and <code>nums[i] &gt; nums[i+2]</code> at the same time, we can directly return false since deleting either of <code>nums[i]</code> or <code>nums[i+1]</code> would require at least one more operation. Otherwise, one of them could be deleted to temporarily save the day, but the number of operation would need to be set to 1, incase another <code>nums[i] &gt; nums[i + 1]</code> situation pops up, making a non-decreasing array impossible.</p>
+<p>There are two boundary cases to be dealt with, i.e. the beginning and the end, in which there&apos;s no <code>nums[i-1]</code> and <code>nums[i+1]</code>. One convenient way is to add a smallest number to the front and a largest number to the end. </p>
+<h2 id="code"><strong>Code:</strong></h2>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">checkPossibility</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
+        nums.insert(nums.begin(), <span class="hljs-number">-100000</span>);
+        nums.push_back(<span class="hljs-number">100000</span>);
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.size()<span class="hljs-number">-1</span>; i++) {
+            <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            <span class="hljs-keyword">if</span> (nums[i] &gt; nums[i+<span class="hljs-number">1</span>]) {
+                <span class="hljs-keyword">if</span> (nums[i<span class="hljs-number">-1</span>] &gt; nums[i+<span class="hljs-number">1</span>] &amp;&amp; nums[i] &gt; nums[i+<span class="hljs-number">2</span>]) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+                <span class="hljs-keyword">else</span> count += <span class="hljs-number">1</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+};
+</code></pre>
+<h2 id="complexity"><strong>Complexity:</strong></h2>
+<ul>
+<li><p>The time complexity of inserting a number in front of a vector is <code>O(n)</code>; adding one at the end is <code>O(1)</code>. Traversing the array from left to right takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(n)</code>.</p>
+</li>
+<li><p>The extra space in this algorithm is used for storing the variable <code>count</code> and the two numbers added to the array, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -324,14 +368,10 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="135. Candy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 406. Queue Reconstruction by Height [Medium]">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="455. Assign Cookies.html" class="navigation navigation-next " aria-label="Next page: 455. Assign Cookies [Easy]">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -340,7 +380,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Chapter1 Greedy","level":"1.2","depth":1,"next":{"title":"455. Assign Cookies [Easy]","level":"1.2.1","depth":2,"path":"Greedy/455. Assign Cookies.md","ref":"Greedy/455. Assign Cookies.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/README.md","mtime":"2020-12-11T09:03:04.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:09:49.221Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"665. Non-decreasing Array [Easy]","level":"1.2.10","depth":2,"previous":{"title":"406. Queue Reconstruction by Height [Medium]","level":"1.2.9","depth":2,"path":"Greedy/135. Candy.md","ref":"Greedy/135. Candy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/665. Non-decreasing Array.md","mtime":"2020-12-20T04:52:54.662Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:29:51.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

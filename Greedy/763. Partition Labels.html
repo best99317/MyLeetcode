@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>605. Can Place Flowers [Easy] · GitBook</title>
+        <title>763. Partition Labels [Medium] · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="452. Minimum Number of Arrows to Burst Balloons.html" />
+    <link rel="next" href="122. Best Time to Buy and Sell Stock II.html" />
     
     
-    <link rel="prev" href="376. Wiggle Subsequence.html" />
+    <link rel="prev" href="452. Minimum Number of Arrows to Burst Balloons.html" />
     
 
     </head>
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="605. Can Place Flowers.html">
+        <li class="chapter " data-level="1.2.5" data-path="605. Can Place Flowers.html">
             
                 <a href="605. Can Place Flowers.html">
             
@@ -194,7 +194,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="763. Partition Labels.html">
+        <li class="chapter active" data-level="1.2.7" data-path="763. Partition Labels.html">
             
                 <a href="763. Partition Labels.html">
             
@@ -281,7 +281,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >605. Can Place Flowers [Easy]</a>
+        <a href=".." >763. Partition Labels [Medium]</a>
     </h1>
 </div>
 
@@ -296,47 +296,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="605-can-place-flowers-medium"><a href="https://leetcode.com/problems/can-place-flowers/" target="_blank">605. Can Place Flowers</a> [Medium]</h1>
-<p>Suppose you have a long flowerbed in which some of the plots are planted and some are not. However, flowers cannot be planted in adjacent plots - they would compete for water and both would die.</p>
-<p>Given a flowerbed (represented as an array containing 0 and 1, where 0 means empty and 1 means not empty), and a number <strong>n</strong>, return if <strong>n</strong> new flowers can be planted in it without violating the no-adjacent-flowers rule.</p>
+                                <h1 id="763-partition-labels-medium"><a href="https://leetcode.com/problems/partition-labels/" target="_blank">763. Partition Labels</a> [Medium]</h1>
+<p>A string <code>S</code> of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts.</p>
 <p><strong>Example 1:</strong></p>
-<pre><code>Input: flowerbed = [1,0,0,0,1], n = 1
-Output: True
-</code></pre><p><strong>Example 2:</strong></p>
-<pre><code>Input: flowerbed = [1,0,0,0,1], n = 2
-Output: False
+<pre><code>Input: S = &quot;ababcbacadefegdehijhklij&quot;
+Output: [9,7,8]
+Explanation:
+The partition is &quot;ababcbaca&quot;, &quot;defegde&quot;, &quot;hijhklij&quot;.
+This is a partition so that each letter appears in at most one part.
+A partition like &quot;ababcbacadefegde&quot;, &quot;hijhklij&quot; is incorrect, because it splits S into less parts.
 </code></pre><p><strong>Note:</strong></p>
 <ol>
-<li>The input array won&apos;t violate no-adjacent-flowers rule.</li>
-<li>The input array size is in the range of [1, 20000].</li>
-<li><strong>n</strong> is a non-negative integer which won&apos;t exceed the input array size.</li>
+<li><code>S</code> will have length in range <code>[1, 500]</code>.</li>
+<li><code>S</code> will consist of lowercase letters (<code>&apos;a&apos;</code> to <code>&apos;z&apos;</code>) only.</li>
 </ol>
 <hr>
 <h2 id="anaylsis"><strong>Anaylsis:</strong></h2>
-<p>It is not hard to see that only three consecutive 0&apos;s allow one flower to be planted in the middle, except for the two plots on the left and right ends, which need only 2 adjacent 0&apos;s to plant a flower.</p>
-<p>The greedy policy here is to traverse the flowerbed from left to right and plant a flower in the middle whenever 3 consecutive 0&apos;s appear, and add 1 to the flower planted. Two boundary cases need to be dealt with on the left and right ends. One tricky way to avoid special attending on the boundaries is to add a 0 to both ends and then start the traverse from the newly extended left. In this way we can get the maximum number of flowers that can be planted which can be compared to the number required.</p>
+<p>This problem can be much easier to deal with if we use a hash table to track the first position, the last position of the letters, and whether they appear only once in the given string, knowing that the first and last appearances of some letter must be included in the same partition. Letters that only appear once in the string can be parted solo if not entrapped within a partition.</p>
+<p>Given a hash map that documents the left most and right most positions of letters, the problem is converted to something very similat to problem <a href="https://leetcode.com/problems/merge-intervals/" target="_blank">56. Merge Intervals</a>, because we can simply merge the letter intervals and get the partitions.</p>
 <h2 id="code"><strong>Code:</strong></h2>
 <pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">canPlaceFlowers</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; flowerbed, <span class="hljs-keyword">int</span> n)</span> </span>{
-        <span class="hljs-keyword">int</span> max_num = <span class="hljs-number">0</span>;
-        flowerbed.insert(flowerbed.begin(), <span class="hljs-number">0</span>);
-        flowerbed.insert(flowerbed.end(), <span class="hljs-number">0</span>);
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; flowerbed.size()<span class="hljs-number">-1</span>; i += <span class="hljs-number">1</span>) {
-            <span class="hljs-keyword">if</span> (flowerbed[i<span class="hljs-number">-1</span>] == <span class="hljs-number">0</span> &amp;&amp; flowerbed[i] == <span class="hljs-number">0</span> &amp;&amp; flowerbed[i+<span class="hljs-number">1</span>] == <span class="hljs-number">0</span>) {
-                flowerbed[i] = <span class="hljs-number">1</span>;
-                max_num += <span class="hljs-number">1</span>;
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; points)</span> </span>{
+        <span class="hljs-keyword">if</span> (points.size() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        sort(points.begin(), points.end(), [](<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; a, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; b){<span class="hljs-keyword">return</span> a[<span class="hljs-number">1</span>] &lt; b[<span class="hljs-number">1</span>];});
+        <span class="hljs-keyword">int</span> point = points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; interval: points) {
+            <span class="hljs-keyword">if</span> (interval[<span class="hljs-number">0</span>] &gt; point) {
+                point = interval[<span class="hljs-number">1</span>];
+                res += <span class="hljs-number">1</span>;
             }
         }
-        <span class="hljs-keyword">return</span> max_num &gt;= n;
+        <span class="hljs-keyword">return</span> res;
     }
 };
 </code></pre>
 <h2 id="complexity"><strong>Complexity:</strong></h2>
 <ul>
-<li><p>The time complexity of inserting a number in front of a vector is <code>O(n)</code>; adding one at the end is <code>O(1)</code>. Traversing the flowerbed from left to right takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(n)</code>.</p>
+<li><p>The time complexity of sorting the intervals is <code>O(nlogn)</code>. Traversing the sorted intervals takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(nlogn)</code>.</p>
 </li>
-<li><p>The extra space in this algorithm is used for storing the two 0&apos;s and some variables like <code>max_num</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
+<li><p>The extra space in this algorithm is used for storing the two 0&apos;s and variables like <code>point</code> and <code>res</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
 </li>
 </ul>
 
@@ -366,12 +366,12 @@ Output: False
 
             
                 
-                <a href="376. Wiggle Subsequence.html" class="navigation navigation-prev " aria-label="Previous page: 376. Wiggle Subsequence [Medium]">
+                <a href="452. Minimum Number of Arrows to Burst Balloons.html" class="navigation navigation-prev " aria-label="Previous page: 452. Minimum Number of Arrows to Burst Balloons [Medium]">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="452. Minimum Number of Arrows to Burst Balloons.html" class="navigation navigation-next " aria-label="Next page: 452. Minimum Number of Arrows to Burst Balloons [Medium]">
+                <a href="122. Best Time to Buy and Sell Stock II.html" class="navigation navigation-next " aria-label="Next page: 122. Best Time to Buy and Sell Stock II [Easy]">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -382,7 +382,7 @@ Output: False
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"next":{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","ref":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","articles":[]},"previous":{"title":"376. Wiggle Subsequence [Medium]","level":"1.2.4","depth":2,"path":"Greedy/376. Wiggle Subsequence.md","ref":"Greedy/376. Wiggle Subsequence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/605. Can Place Flowers.md","mtime":"2020-12-20T04:52:45.058Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:09:49.221Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"763. Partition Labels [Medium]","level":"1.2.7","depth":2,"next":{"title":"122. Best Time to Buy and Sell Stock II [Easy]","level":"1.2.8","depth":2,"path":"Greedy/122. Best Time to Buy and Sell Stock II.md","ref":"Greedy/122. Best Time to Buy and Sell Stock II.md","articles":[]},"previous":{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","ref":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/763. Partition Labels.md","mtime":"2020-12-20T04:53:09.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:29:51.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

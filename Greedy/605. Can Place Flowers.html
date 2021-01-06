@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>455. Assign Cookies [Easy] · GitBook</title>
+        <title>605. Can Place Flowers [Easy] · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="135. Candy.html" />
+    <link rel="next" href="452. Minimum Number of Arrows to Burst Balloons.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="376. Wiggle Subsequence.html" />
     
 
     </head>
@@ -116,7 +116,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="455. Assign Cookies.html">
+        <li class="chapter " data-level="1.2.1" data-path="455. Assign Cookies.html">
             
                 <a href="455. Assign Cookies.html">
             
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="605. Can Place Flowers.html">
+        <li class="chapter active" data-level="1.2.5" data-path="605. Can Place Flowers.html">
             
                 <a href="605. Can Place Flowers.html">
             
@@ -281,7 +281,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >455. Assign Cookies [Easy]</a>
+        <a href=".." >605. Can Place Flowers [Easy]</a>
     </h1>
 </div>
 
@@ -296,55 +296,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="455-assign-cookies-easy"><a href="https://leetcode.com/problems/assign-cookies/" target="_blank">455. Assign Cookies</a> [Easy]</h1>
-<h2 id="problem-description"><strong>Problem Description:</strong></h2>
-<p>Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie. Each child <code>i</code> has a greed factor <code>g[i]</code>, which is the minimum size of a cookie that the child will be content with; and each cookie <code>j</code> has a size <code>s[j]</code>. If <code>s[j] &gt;= g[i]</code>, we can assign the cookie <code>j</code> to the child <code>i</code>, and the child <code>i</code> will be content. Your goal is to maximize the number of your content children and output the maximum number.</p>
-<p><strong>Note:</strong>
-You may assume the greed factor is always positive.
-You cannot assign more than one cookie to one child.</p>
+                                <h1 id="605-can-place-flowers-medium"><a href="https://leetcode.com/problems/can-place-flowers/" target="_blank">605. Can Place Flowers</a> [Medium]</h1>
+<p>Suppose you have a long flowerbed in which some of the plots are planted and some are not. However, flowers cannot be planted in adjacent plots - they would compete for water and both would die.</p>
+<p>Given a flowerbed (represented as an array containing 0 and 1, where 0 means empty and 1 means not empty), and a number <strong>n</strong>, return if <strong>n</strong> new flowers can be planted in it without violating the no-adjacent-flowers rule.</p>
 <p><strong>Example 1:</strong></p>
-<pre><code>Input: [1,2,3], [1,1]
-
-Output: 1
-
-Explanation: You have 3 children and 2 cookies. The greed factors of 3 children are 1, 2, 3.
-And even though you have 2 cookies, since their size is both 1, you could only make the child whose greed factor is 1 content.
-You need to output 1.
+<pre><code>Input: flowerbed = [1,0,0,0,1], n = 1
+Output: True
 </code></pre><p><strong>Example 2:</strong></p>
-<pre><code>Input: [1,2], [1,2,3]
-
-Output: 2
-
-Explanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2.
-You have 3 cookies and their sizes are big enough to gratify all of the children,
-You need to output 2.
-</code></pre><hr>
+<pre><code>Input: flowerbed = [1,0,0,0,1], n = 2
+Output: False
+</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li>The input array won&apos;t violate no-adjacent-flowers rule.</li>
+<li>The input array size is in the range of [1, 20000].</li>
+<li><strong>n</strong> is a non-negative integer which won&apos;t exceed the input array size.</li>
+</ol>
+<hr>
 <h2 id="anaylsis"><strong>Anaylsis:</strong></h2>
-<p>Since we are maximizing the number of children to be content, we should always use the least number of cookies needed to satisfy the easiest one, i.e. the child greedy for the least number of cookies.</p>
-<p>Thus, we should first sort the array of cookies and the array of children, then set two pointers to track them, start with the least, and move to next when <code>s[j] &gt;= g[i]</code> is satisfied.</p>
+<p>It is not hard to see that only three consecutive 0&apos;s allow one flower to be planted in the middle, except for the two plots on the left and right ends, which need only 2 adjacent 0&apos;s to plant a flower.</p>
+<p>The greedy policy here is to traverse the flowerbed from left to right and plant a flower in the middle whenever 3 consecutive 0&apos;s appear, and add 1 to the flower planted. Two boundary cases need to be dealt with on the left and right ends. One tricky way to avoid special attending on the boundaries is to add a 0 to both ends and then start the traverse from the newly extended left. In this way we can get the maximum number of flowers that can be planted which can be compared to the number required.</p>
 <h2 id="code"><strong>Code:</strong></h2>
 <pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">findContentChildren</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; g, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; s)</span> </span>{
-        sort(g.begin(),g.end());
-        sort(s.begin(),s.end());
-        <span class="hljs-keyword">int</span> child=<span class="hljs-number">0</span>;
-        <span class="hljs-keyword">int</span> cookie = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">while</span>(cookie&lt;s.size() &amp;&amp; child&lt;g.size()){
-            <span class="hljs-keyword">if</span>(g[child]&lt;=s[cookie]){
-                child++;
-            } 
-            cookie++;
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">canPlaceFlowers</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; flowerbed, <span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">int</span> max_num = <span class="hljs-number">0</span>;
+        flowerbed.insert(flowerbed.begin(), <span class="hljs-number">0</span>);
+        flowerbed.insert(flowerbed.end(), <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; flowerbed.size()<span class="hljs-number">-1</span>; i += <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">if</span> (flowerbed[i<span class="hljs-number">-1</span>] == <span class="hljs-number">0</span> &amp;&amp; flowerbed[i] == <span class="hljs-number">0</span> &amp;&amp; flowerbed[i+<span class="hljs-number">1</span>] == <span class="hljs-number">0</span>) {
+                flowerbed[i] = <span class="hljs-number">1</span>;
+                max_num += <span class="hljs-number">1</span>;
+            }
         }
-        <span class="hljs-keyword">return</span> child;
+        <span class="hljs-keyword">return</span> max_num &gt;= n;
     }
 };
 </code></pre>
 <h2 id="complexity"><strong>Complexity:</strong></h2>
 <ul>
-<li><p>The time complexity can be analyzed from two parts: 1. sorting vector <code>g</code> and vector s, which would cost <code>O(nlogn)</code>; 2. visit at most every element in <code>s</code> and <code>g</code> once, which would cost <code>O(n)</code>. Thus, the time complexity of this algorithm is <code>O(nlogn)</code>.</p>
+<li><p>The time complexity of inserting a number in front of a vector is <code>O(n)</code>; adding one at the end is <code>O(1)</code>. Traversing the flowerbed from left to right takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(n)</code>.</p>
 </li>
-<li><p>The extra space in this algorithm is used for storing the two pointers for tracking <code>s</code> and <code>g</code>, which take up <code>O(1)</code> space complexity</p>
+<li><p>The extra space in this algorithm is used for storing the two 0&apos;s and some variables like <code>max_num</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
 </li>
 </ul>
 
@@ -374,12 +366,12 @@ You need to output 2.
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter1 Greedy">
+                <a href="376. Wiggle Subsequence.html" class="navigation navigation-prev " aria-label="Previous page: 376. Wiggle Subsequence [Medium]">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="135. Candy.html" class="navigation navigation-next " aria-label="Next page: 135. Candy [Hard]">
+                <a href="452. Minimum Number of Arrows to Burst Balloons.html" class="navigation navigation-next " aria-label="Next page: 452. Minimum Number of Arrows to Burst Balloons [Medium]">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -390,7 +382,7 @@ You need to output 2.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"455. Assign Cookies [Easy]","level":"1.2.1","depth":2,"next":{"title":"135. Candy [Hard]","level":"1.2.2","depth":2,"path":"Greedy/135. Candy.md","ref":"Greedy/135. Candy.md","articles":[]},"previous":{"title":"Chapter1 Greedy","level":"1.2","depth":1,"path":"Greedy/README.md","ref":"Greedy/README.md","articles":[{"title":"455. Assign Cookies [Easy]","level":"1.2.1","depth":2,"path":"Greedy/455. Assign Cookies.md","ref":"Greedy/455. Assign Cookies.md","articles":[]},{"title":"135. Candy [Hard]","level":"1.2.2","depth":2,"path":"Greedy/135. Candy.md","ref":"Greedy/135. Candy.md","articles":[]},{"title":"435. Non-overlapping Intervals [Medium]","level":"1.2.3","depth":2,"path":"Greedy/435. Non-overlapping Intervals.md","ref":"Greedy/435. Non-overlapping Intervals.md","articles":[]},{"title":"376. Wiggle Subsequence [Medium]","level":"1.2.4","depth":2,"path":"Greedy/376. Wiggle Subsequence.md","ref":"Greedy/376. Wiggle Subsequence.md","articles":[]},{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"path":"Greedy/605. Can Place Flowers.md","ref":"Greedy/605. Can Place Flowers.md","articles":[]},{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","ref":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","articles":[]},{"title":"763. Partition Labels [Medium]","level":"1.2.7","depth":2,"path":"Greedy/763. Partition Labels.md","ref":"Greedy/763. Partition Labels.md","articles":[]},{"title":"122. Best Time to Buy and Sell Stock II [Easy]","level":"1.2.8","depth":2,"path":"Greedy/122. Best Time to Buy and Sell Stock II.md","ref":"Greedy/122. Best Time to Buy and Sell Stock II.md","articles":[]},{"title":"406. Queue Reconstruction by Height [Medium]","level":"1.2.9","depth":2,"path":"Greedy/135. Candy.md","ref":"Greedy/135. Candy.md","articles":[]},{"title":"665. Non-decreasing Array [Easy]","level":"1.2.10","depth":2,"path":"Greedy/665. Non-decreasing Array.md","ref":"./Greedy/665. Non-decreasing Array.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/455. Assign Cookies.md","mtime":"2020-12-18T14:49:06.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:09:49.221Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"next":{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","ref":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","articles":[]},"previous":{"title":"376. Wiggle Subsequence [Medium]","level":"1.2.4","depth":2,"path":"Greedy/376. Wiggle Subsequence.md","ref":"Greedy/376. Wiggle Subsequence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/605. Can Place Flowers.md","mtime":"2020-12-20T04:52:45.058Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:29:51.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

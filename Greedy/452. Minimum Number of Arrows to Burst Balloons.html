@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>376. Wiggle Subsequence [Medium] · GitBook</title>
+        <title>452. Minimum Number of Arrows to Burst Balloons [Medium] · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="605. Can Place Flowers.html" />
+    <link rel="next" href="763. Partition Labels.html" />
     
     
-    <link rel="prev" href="435. Non-overlapping Intervals.html" />
+    <link rel="prev" href="605. Can Place Flowers.html" />
     
 
     </head>
@@ -155,7 +155,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="376. Wiggle Subsequence.html">
+        <li class="chapter " data-level="1.2.4" data-path="376. Wiggle Subsequence.html">
             
                 <a href="376. Wiggle Subsequence.html">
             
@@ -181,7 +181,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="452. Minimum Number of Arrows to Burst Balloons.html">
+        <li class="chapter active" data-level="1.2.6" data-path="452. Minimum Number of Arrows to Burst Balloons.html">
             
                 <a href="452. Minimum Number of Arrows to Burst Balloons.html">
             
@@ -281,7 +281,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >376. Wiggle Subsequence [Medium]</a>
+        <a href=".." >452. Minimum Number of Arrows to Burst Balloons [Medium]</a>
     </h1>
 </div>
 
@@ -296,44 +296,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="376-wiggle-subsequence-medium"><a href="https://leetcode.com/problems/wiggle-subsequence/" target="_blank">376. Wiggle Subsequence</a> [Medium]</h1>
-<p>A sequence of numbers is called a <strong>wiggle sequence</strong> if the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with fewer than two elements is trivially a wiggle sequence.</p>
-<p>For example, <code>[1,7,4,9,2,5]</code> is a wiggle sequence because the differences <code>(6,-3,5,-7,3)</code> are alternately positive and negative. In contrast, <code>[1,4,7,2,5]</code> and <code>[1,7,4,5,5]</code> are not wiggle sequences, the first because its first two differences are positive and the second because its last difference is zero.</p>
-<p>Given a sequence of integers, return the length of the longest subsequence that is a wiggle sequence. A subsequence is obtained by deleting some number of elements (eventually, also zero) from the original sequence, leaving the remaining elements in their original order.</p>
-<p><strong>Example 1:</strong></p>
-<pre><code>Input: [1,7,4,9,2,5]
-Output: 6
-Explanation: The entire sequence is a wiggle sequence.
-</code></pre><p><strong>Example 2:</strong></p>
-<pre><code>Input: [1,17,5,10,13,15,10,5,16,8]
-Output: 7
-Explanation: There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].
-</code></pre><p><strong>Example 3:</strong></p>
-<pre><code>Input: [1,2,3,4,5,6,7,8,9]
-Output: 2
+                                <h1 id="452-minimum-number-of-arrows-to-burst-balloons-medium"><a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">452. Minimum Number of Arrows to Burst Balloons</a> [Medium]</h1>
+<p>There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it&apos;s horizontal, y-coordinates don&apos;t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most <code>10^4</code> balloons.</p>
+<p>An arrow can be shot up exactly vertically from different points along the x-axis. A balloon with <code>x_{start}</code> and <code>x_{end}</code>  bursts by an arrow shot at <code>x</code> if <code>x_{start} &lt;= x &lt;= x_{end}</code> . There is no limit to the number of arrows that can be shot. An arrow once shot keeps travelling up infinitely. The problem is to find the minimum number of arrows that must be shot to burst all balloons.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Input:
+[[10,16], [2,8], [1,6], [7,12]]
+
+Output:
+2
+
+Explanation:
+One way is to shoot one arrow for example at x = 6 (bursting the balloons [2,8] and [1,6]) and another arrow at x = 11 (bursting the other two balloons).
 </code></pre><hr>
 <h2 id="anaylsis"><strong>Anaylsis:</strong></h2>
-<p>This problem is to find a sequence of the given array differences between successive numbers strictly alternate. That is two say, starting from the first element of the sequence, the number gets bigger then smaller then bigger, so on and so forth, or first gets smaller then bigger then smaller, so on and so forth.</p>
-<p>The hard part is that we may encounter a series of numbers that increase of decrease monotonically. From these numbers, we may select only one into the wiggle sequence. Then everything else follows the greedy policy.  Without losing generality, we can choose the maximum or minimum of these series, i.e. the peak or the valley.</p>
-<p>One easy way to find the peak and the valley is to keep track of the differences between adjacent numbers. We can add one to the result once the difference alters from positive to negative or from negative to positive.</p>
+<p>To translate the problem into a simpler and more mathematical description, we are asked to cover the given closed intervals with the minimum number of points. One general illustrative direction is to sort the intervals by some criterion and traverse them from left to right and put a point at the position with many overlaps between intervals to some extreme.</p>
+<p>One important rule I came to realize is that when trying to cover as many intervals as possible as we move the point from left to right, <strong>the point must still cover the intervals that it originally covers, otherwise we would need a new point to cover the intervals we have passed, which apparently may not be the optimal solution.</strong></p>
+<p>The strategy here is to firstly sort the intervals by their right most points, then set the point at the right end of the first interval. We continue to traverse the next several intervals to see if their left most points are less than or equal to the point we set. If so, that means they are also covered by this point. If not, then we need a new point for this one, and it should be set at the corresponding right most point of this interval.</p>
 <h2 id="code"><strong>Code:</strong></h2>
 <pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
-        <span class="hljs-keyword">int</span> n = nums.size();
-        <span class="hljs-comment">// Boundary condition</span>
-        <span class="hljs-keyword">if</span> (n &lt; <span class="hljs-number">2</span>) {
-            <span class="hljs-keyword">return</span> n;
-        }
-
-        <span class="hljs-keyword">int</span> cur_diff = <span class="hljs-number">0</span>;   <span class="hljs-comment">// track the current difference between num[i] and num[i-1]</span>
-        <span class="hljs-keyword">int</span> pre_diff = <span class="hljs-number">0</span>;   <span class="hljs-comment">// track the previous difference</span>
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; points)</span> </span>{
+        <span class="hljs-keyword">if</span> (points.size() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        sort(points.begin(), points.end(), [](<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; a, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; b){<span class="hljs-keyword">return</span> a[<span class="hljs-number">1</span>] &lt; b[<span class="hljs-number">1</span>];});
+        <span class="hljs-keyword">int</span> point = points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];
         <span class="hljs-keyword">int</span> res = <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.size(); i++) {
-            cur_diff = nums[i] - nums[i - <span class="hljs-number">1</span>];
-            <span class="hljs-keyword">if</span> ((cur_diff &gt; <span class="hljs-number">0</span> &amp;&amp; pre_diff &lt;= <span class="hljs-number">0</span>) || (pre_diff &gt;= <span class="hljs-number">0</span> &amp;&amp; cur_diff &lt; <span class="hljs-number">0</span>)) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; interval: points) {
+            <span class="hljs-keyword">if</span> (interval[<span class="hljs-number">0</span>] &gt; point) {
+                point = interval[<span class="hljs-number">1</span>];
                 res += <span class="hljs-number">1</span>;
-                pre_diff = cur_diff;
             }
         }
         <span class="hljs-keyword">return</span> res;
@@ -342,9 +333,9 @@ Output: 2
 </code></pre>
 <h2 id="complexity"><strong>Complexity:</strong></h2>
 <ul>
-<li><p>This algorithm visit the first and ast element of the given array once and every other element twice. So the time complexity of this algorithm is <code>O(n)</code>.</p>
+<li><p>The time complexity of sorting the intervals is <code>O(nlogn)</code>. Traversing the sorted intervals takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(nlogn)</code>.</p>
 </li>
-<li><p>The extra space in this algorithm is used for storing the variables tracking the current difference, the previous difference, and the result, which take up only <code>O(1)</code> space complexity.</p>
+<li><p>The extra space in this algorithm is used for storing the two 0&apos;s and variables like <code>point</code> and <code>res</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
 </li>
 </ul>
 
@@ -374,12 +365,12 @@ Output: 2
 
             
                 
-                <a href="435. Non-overlapping Intervals.html" class="navigation navigation-prev " aria-label="Previous page: 435. Non-overlapping Intervals [Medium]">
+                <a href="605. Can Place Flowers.html" class="navigation navigation-prev " aria-label="Previous page: 605. Can Place Flowers [Easy]">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="605. Can Place Flowers.html" class="navigation navigation-next " aria-label="Next page: 605. Can Place Flowers [Easy]">
+                <a href="763. Partition Labels.html" class="navigation navigation-next " aria-label="Next page: 763. Partition Labels [Medium]">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -390,7 +381,7 @@ Output: 2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"376. Wiggle Subsequence [Medium]","level":"1.2.4","depth":2,"next":{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"path":"Greedy/605. Can Place Flowers.md","ref":"Greedy/605. Can Place Flowers.md","articles":[]},"previous":{"title":"435. Non-overlapping Intervals [Medium]","level":"1.2.3","depth":2,"path":"Greedy/435. Non-overlapping Intervals.md","ref":"Greedy/435. Non-overlapping Intervals.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/376. Wiggle Subsequence.md","mtime":"2020-12-18T14:47:37.588Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:09:49.221Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"next":{"title":"763. Partition Labels [Medium]","level":"1.2.7","depth":2,"path":"Greedy/763. Partition Labels.md","ref":"Greedy/763. Partition Labels.md","articles":[]},"previous":{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"path":"Greedy/605. Can Place Flowers.md","ref":"Greedy/605. Can Place Flowers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","mtime":"2020-12-20T04:52:21.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:29:51.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

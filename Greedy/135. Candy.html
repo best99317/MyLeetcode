@@ -168,6 +168,84 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.5" data-path="605. Can Place Flowers.html">
+            
+                <a href="605. Can Place Flowers.html">
+            
+                    
+                    605. Can Place Flowers [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="452. Minimum Number of Arrows to Burst Balloons.html">
+            
+                <a href="452. Minimum Number of Arrows to Burst Balloons.html">
+            
+                    
+                    452. Minimum Number of Arrows to Burst Balloons [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="763. Partition Labels.html">
+            
+                <a href="763. Partition Labels.html">
+            
+                    
+                    763. Partition Labels [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="122. Best Time to Buy and Sell Stock II.html">
+            
+                <a href="122. Best Time to Buy and Sell Stock II.html">
+            
+                    
+                    122. Best Time to Buy and Sell Stock II [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="135. Candy.html">
+            
+                <a href="135. Candy.html">
+            
+                    
+                    406. Queue Reconstruction by Height [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="665. Non-decreasing Array.html">
+            
+                <a href="665. Non-decreasing Array.html">
+            
+                    
+                    665. Non-decreasing Array [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -241,12 +319,12 @@ Explanation: You can allocate to the first, second and third child with 1, 2, 1 
 <p>The intuition of this problem would be to traverse the array and assign to local minimum ratings one candy and add one more to its neighbors. But one may get stuck at finding the local minimums. On one hand, they are related only to their neighbors and can not be found through sorting. On the other hand, if simply traverse the array with a greedy policy from left to right, one may not know how many candies to assign to a larger rating that comes first, because the number ratings that are less than the current one remains unknown.</p>
 <p>But the thing is that this problem is not that complicated. The requirements of this problem is equivalent to the following:</p>
 <ul>
-<li>$ratings[i] \geq 1$</li>
-<li>if $ratings[i] &lt; ratings[i+1]$, then $candies[i] &lt; candies[i+1]$</li>
-<li>if $ratings[i] &gt; ratings[i+1]$, then $candies[i] &gt; candies[i+1]$</li>
+<li><code>ratings[i] &gt;= 1</code></li>
+<li>if <code>ratings[i] &lt; ratings[i+1]</code>, then <code>candies[i] &lt; candies[i+1]</code></li>
+<li>if <code>ratings[i] &gt; ratings[i+1]</code>, then <code>candies[i] &gt; candies[i+1]</code></li>
 </ul>
 <p>In fact, the second rule can be realized by traversing greedily from left to right and third from right to left. </p>
-<p>Initialize all $candies[i]$ to 1. First traverse from left to right. If $ratings[i] &lt; ratings[i+1]$, then $candies[i+1] = candies[i] + 1$. Secondly, traverse from left to right. If $ratings[i-1] &gt; ratings[i]$, then $candies[i-1] = max(candies[i] + 1, candies[i])$. Using the $max$ function guarantees that the second rule still holds.</p>
+<p>Initialize all <code>candies[i]</code> to 1. First traverse from left to right. If <code>ratings[i] &lt; ratings[i+1]</code>, then <code>candies[i+1] = candies[i] + 1</code>. Secondly, traverse from left to right. If <code>ratings[i-1] &gt; ratings[i]</code>, then <code>candies[i-1] = max(candies[i] + 1, candies[i])</code>. Using the <code>max</code> function guarantees that the second rule still holds.</p>
 <h2 id="code"><strong>Code:</strong></h2>
 <pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
@@ -276,9 +354,9 @@ Explanation: You can allocate to the first, second and third child with 1, 2, 1 
 </code></pre>
 <h2 id="complexity"><strong>Complexity:</strong></h2>
 <ul>
-<li><p>The time complexities of traversing from left to right, right to left and summing up the number of candies are all $O(n)$. Thus, the time complexity of this algorithm is $O(n)$.</p>
+<li><p>The time complexities of traversing from left to right, right to left and summing up the number of candies are all <code>O(n)</code>. Thus, the time complexity of this algorithm is <code>O(n)</code>.</p>
 </li>
-<li><p>The extra space in this algorithm is used for storing the $candies$ array, which is $O(n)$ space complexity, and some variables like $n$ and $res$, which are $O(1)$ complexity. Thus, the space complexity of this algorithm is also $O(n)$.</p>
+<li><p>The extra space in this algorithm is used for storing the <code>candies</code> array, which is <code>O(n)</code> space complexity, and some variables like <code>n</code> and <code>res</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(n)</code>.</p>
 </li>
 </ul>
 
@@ -324,7 +402,7 @@ Explanation: You can allocate to the first, second and third child with 1, 2, 1 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"135. Candy [Hard]","level":"1.2.2","depth":2,"next":{"title":"435. Non-overlapping Intervals [Medium]","level":"1.2.3","depth":2,"path":"Greedy/435. Non-overlapping Intervals.md","ref":"Greedy/435. Non-overlapping Intervals.md","articles":[]},"previous":{"title":"455. Assign Cookies [Easy]","level":"1.2.1","depth":2,"path":"Greedy/455. Assign Cookies.md","ref":"Greedy/455. Assign Cookies.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/135. Candy.md","mtime":"2020-12-12T05:21:47.005Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-17T16:14:16.317Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"135. Candy [Hard]","level":"1.2.2","depth":2,"next":{"title":"435. Non-overlapping Intervals [Medium]","level":"1.2.3","depth":2,"path":"Greedy/435. Non-overlapping Intervals.md","ref":"Greedy/435. Non-overlapping Intervals.md","articles":[]},"previous":{"title":"455. Assign Cookies [Easy]","level":"1.2.1","depth":2,"path":"Greedy/455. Assign Cookies.md","ref":"Greedy/455. Assign Cookies.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/135. Candy.md","mtime":"2020-12-18T14:47:46.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:29:51.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
