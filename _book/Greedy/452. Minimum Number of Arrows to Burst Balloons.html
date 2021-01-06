@@ -1,0 +1,420 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>452. Minimum Number of Arrows to Burst Balloons [Medium] · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="763. Partition Labels.html" />
+    
+    
+    <link rel="prev" href="605. Can Place Flowers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter1 Greedy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="455. Assign Cookies.html">
+            
+                <a href="455. Assign Cookies.html">
+            
+                    
+                    455. Assign Cookies [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="135. Candy.html">
+            
+                <a href="135. Candy.html">
+            
+                    
+                    135. Candy [Hard]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="435. Non-overlapping Intervals.html">
+            
+                <a href="435. Non-overlapping Intervals.html">
+            
+                    
+                    435. Non-overlapping Intervals [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="376. Wiggle Subsequence.html">
+            
+                <a href="376. Wiggle Subsequence.html">
+            
+                    
+                    376. Wiggle Subsequence [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="605. Can Place Flowers.html">
+            
+                <a href="605. Can Place Flowers.html">
+            
+                    
+                    605. Can Place Flowers [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="452. Minimum Number of Arrows to Burst Balloons.html">
+            
+                <a href="452. Minimum Number of Arrows to Burst Balloons.html">
+            
+                    
+                    452. Minimum Number of Arrows to Burst Balloons [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="763. Partition Labels.html">
+            
+                <a href="763. Partition Labels.html">
+            
+                    
+                    763. Partition Labels [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="122. Best Time to Buy and Sell Stock II.html">
+            
+                <a href="122. Best Time to Buy and Sell Stock II.html">
+            
+                    
+                    122. Best Time to Buy and Sell Stock II [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="135. Candy.html">
+            
+                <a href="135. Candy.html">
+            
+                    
+                    406. Queue Reconstruction by Height [Medium]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="665. Non-decreasing Array.html">
+            
+                <a href="665. Non-decreasing Array.html">
+            
+                    
+                    665. Non-decreasing Array [Easy]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >452. Minimum Number of Arrows to Burst Balloons [Medium]</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="452-minimum-number-of-arrows-to-burst-balloons-medium"><a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">452. Minimum Number of Arrows to Burst Balloons</a> [Medium]</h1>
+<p>There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it&apos;s horizontal, y-coordinates don&apos;t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most <code>10^4</code> balloons.</p>
+<p>An arrow can be shot up exactly vertically from different points along the x-axis. A balloon with <code>x_{start}</code> and <code>x_{end}</code>  bursts by an arrow shot at <code>x</code> if <code>x_{start} &lt;= x &lt;= x_{end}</code> . There is no limit to the number of arrows that can be shot. An arrow once shot keeps travelling up infinitely. The problem is to find the minimum number of arrows that must be shot to burst all balloons.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Input:
+[[10,16], [2,8], [1,6], [7,12]]
+
+Output:
+2
+
+Explanation:
+One way is to shoot one arrow for example at x = 6 (bursting the balloons [2,8] and [1,6]) and another arrow at x = 11 (bursting the other two balloons).
+</code></pre><hr>
+<h2 id="anaylsis"><strong>Anaylsis:</strong></h2>
+<p>To translate the problem into a simpler and more mathematical description, we are asked to cover the given closed intervals with the minimum number of points. One general illustrative direction is to sort the intervals by some criterion and traverse them from left to right and put a point at the position with many overlaps between intervals to some extreme.</p>
+<p>One important rule I came to realize is that when trying to cover as many intervals as possible as we move the point from left to right, <strong>the point must still cover the intervals that it originally covers, otherwise we would need a new point to cover the intervals we have passed, which apparently may not be the optimal solution.</strong></p>
+<p>The strategy here is to firstly sort the intervals by their right most points, then set the point at the right end of the first interval. We continue to traverse the next several intervals to see if their left most points are less than or equal to the point we set. If so, that means they are also covered by this point. If not, then we need a new point for this one, and it should be set at the corresponding right most point of this interval.</p>
+<h2 id="code"><strong>Code:</strong></h2>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; points)</span> </span>{
+        <span class="hljs-keyword">if</span> (points.size() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        sort(points.begin(), points.end(), [](<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; a, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; b){<span class="hljs-keyword">return</span> a[<span class="hljs-number">1</span>] &lt; b[<span class="hljs-number">1</span>];});
+        <span class="hljs-keyword">int</span> point = points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; interval: points) {
+            <span class="hljs-keyword">if</span> (interval[<span class="hljs-number">0</span>] &gt; point) {
+                point = interval[<span class="hljs-number">1</span>];
+                res += <span class="hljs-number">1</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+};
+</code></pre>
+<h2 id="complexity"><strong>Complexity:</strong></h2>
+<ul>
+<li><p>The time complexity of sorting the intervals is <code>O(nlogn)</code>. Traversing the sorted intervals takes <code>O(n)</code> time. Thus, the time complexity of this algorithm is <code>O(nlogn)</code>.</p>
+</li>
+<li><p>The extra space in this algorithm is used for storing the two 0&apos;s and variables like <code>point</code> and <code>res</code>, which are <code>O(1)</code> complexity. Thus, the space complexity of this algorithm is also <code>O(1)</code>.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="605. Can Place Flowers.html" class="navigation navigation-prev " aria-label="Previous page: 605. Can Place Flowers [Easy]">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="763. Partition Labels.html" class="navigation navigation-next " aria-label="Next page: 763. Partition Labels [Medium]">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"452. Minimum Number of Arrows to Burst Balloons [Medium]","level":"1.2.6","depth":2,"next":{"title":"763. Partition Labels [Medium]","level":"1.2.7","depth":2,"path":"Greedy/763. Partition Labels.md","ref":"Greedy/763. Partition Labels.md","articles":[]},"previous":{"title":"605. Can Place Flowers [Easy]","level":"1.2.5","depth":2,"path":"Greedy/605. Can Place Flowers.md","ref":"Greedy/605. Can Place Flowers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Greedy/452. Minimum Number of Arrows to Burst Balloons.md","mtime":"2020-12-20T04:52:21.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T16:09:49.221Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
