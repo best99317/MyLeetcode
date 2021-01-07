@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/Unclassified Code/C++/LeetCode",
+    "python.pythonPath": "/usr/bin/python3",
+    "python.formatting.provider": "black",
+    "files.associations": {
+        "vector": "cpp"
+    }
+}
